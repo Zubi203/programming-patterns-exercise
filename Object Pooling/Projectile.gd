@@ -1,0 +1,10 @@
+extends Area2D
+
+var speed : float = 300.0
+
+func _process(delta):
+	translate(-transform.y * speed * delta)
+
+# called when the Timer node timeouts
+func end_of_lifetime ():
+	queue_free()
